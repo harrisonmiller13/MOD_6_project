@@ -1,0 +1,9 @@
+def keep_token(t):
+    return (t.is_alpha and 
+            not (t.is_space or t.is_punct or 
+                 t.is_stop or t.like_num))
+
+def lemmatize_doc(doc):
+    return [ t.lemma_ for t in doc if keep_token(t)]
+
+docs = [lemmatize_doc(nlp(doc)) for doc in news_train.data]
