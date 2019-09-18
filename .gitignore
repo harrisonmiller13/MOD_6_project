@@ -3,3 +3,8 @@ train.csv
 test.csv
 *.pkl
 *.db
+*.csv
+.DS_Store
+.ipynb_checkpoints/
+*.model
+*.npy
